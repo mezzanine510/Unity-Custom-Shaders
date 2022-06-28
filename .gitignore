@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 # Third party assets
 /[Aa]ssets/ConsolePro
+
+# Plugins
+/[Aa]ssets/Plugins
