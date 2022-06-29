@@ -4,6 +4,8 @@ Shader "Holistic/BumpDiffuse"
     {
         _myDiffuse("Diffuse Texture", 2D) = "white" {}
         _myBump("Bump Texture", 2D) = "bump" {}
+        _bumpAmount("Bump Amount", Range(0, 10)) = 1
+        _bumpScale("Bump Scale", Range(0.5, 2)) = 1
     }
     SubShader
     {
@@ -16,6 +18,8 @@ Shader "Holistic/BumpDiffuse"
 
         sampler2D _myDiffuse;
         sampler2D _myBump;
+        half _bumpAmount;
+        half _bumpScale;
 
         struct Input
         {
@@ -30,8 +34,10 @@ Shader "Holistic/BumpDiffuse"
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
-            o.Albedo = tex2D(_myDiffuse, IN.uv_myDiffuse).rgb;
-            o.Normal = UnpackNormal(tex2D(_myBump, IN.uv_myBump));
+            o.Albedo = tex2D(_myDiffuse, IN.uv_myDiffuse * _bumpScale).rgb;
+            o.Normal = UnpackNormal(tex2D(_myBump, IN.uv_myBump * _bumpScale));
+
+            o.Normal *= float3(_bumpAmount, _bumpAmount, 1);
         }
         ENDCG
     }
