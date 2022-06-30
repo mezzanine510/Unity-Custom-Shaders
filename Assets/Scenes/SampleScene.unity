@@ -178,10 +178,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 23992262624320082, guid: 09df32d15510946c1bd4325af6219685, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 66cec900badb3e44198551cb959e70fa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09df32d15510946c1bd4325af6219685, type: 3}
 --- !u!1 &705507993
@@ -362,6 +358,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3495936919393331961
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1550446194260677876, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 874a2c495874e1543a5a90095b4fd8e7, type: 2}
+    - target: {fileID: 4199680759554607407, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199680759554607407, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199680759554607407, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199680759554607407, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199680759554607407, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0000029504295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199680759554607407, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199680759554607407, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199680759554607407, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199680759554607407, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199680759554607407, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199680759554607407, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630651139015253111, guid: 43e412c604b97974d81416146c746c5d, type: 3}
+      propertyPath: m_Name
+      value: Zombunny_Bumped_Environment_Test
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 43e412c604b97974d81416146c746c5d, type: 3}
 --- !u!1001 &4433024636179847973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -375,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2272775964582870732, guid: f7acf7bc3d4586346be305a0e8317fff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.03
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2272775964582870732, guid: f7acf7bc3d4586346be305a0e8317fff, type: 3}
       propertyPath: m_LocalPosition.y
@@ -413,10 +470,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3478622026813006615, guid: f7acf7bc3d4586346be305a0e8317fff, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 02dff6321f2e02d4480a1357fb2d4548, type: 2}
     - target: {fileID: 7314310312466410388, guid: f7acf7bc3d4586346be305a0e8317fff, type: 3}
       propertyPath: m_Name
       value: Zombunny_Normal_Test

@@ -6,6 +6,7 @@ Shader "Holistic/BumpedEnvironment"
         _bumpTexture ("Bump Texture", 2D) = "bump" {}
         _bumpAmount ("Bump Amount", Range(0, 10)) = 1
         _brightness ("Brightness", Range(0, 10)) = 1
+        _cubeMap ("Cube Map", CUBE) = "white" {}
     }
     SubShader
     {
@@ -20,11 +21,13 @@ Shader "Holistic/BumpedEnvironment"
         sampler2D _bumpTexture;
         half _bumpAmount;
         half _brightness;
+        samplerCUBE _cubeMap;
 
         struct Input
         {
             float2 uv_diffuseTexture;
             float2 uv_bumpTexture;
+            float3 worldRefl; INTERNAL_DATA
         };
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
@@ -38,9 +41,9 @@ Shader "Holistic/BumpedEnvironment"
         {
             o.Albedo = tex2D(_diffuseTexture, IN.uv_diffuseTexture).rgb;
             o.Normal = UnpackNormal(tex2D(_bumpTexture, IN.uv_bumpTexture)) * _brightness;
-
             // multiplies the bump amount by a float3 which corresponds to it's xyz values (or potentially rgb values in other circumstances)
             o.Normal *= float3(_bumpAmount, _bumpAmount, 1);
+            o.Emission = texCUBE(_cubeMap, WorldReflectionVector(IN, o.Normal)).rgb;
         }
 
         ENDCG
