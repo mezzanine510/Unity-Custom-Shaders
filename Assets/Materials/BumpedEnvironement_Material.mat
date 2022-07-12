@@ -61,7 +61,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _cubeMap:
-        m_Texture: {fileID: 8900000, guid: f2534a0c318d54f4b92555b9e652ad36, type: 3}
+        m_Texture: {fileID: 8900000, guid: de78f930088fc194290da7400c89bfb5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _diffuseTexture:
@@ -86,7 +86,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _brightness: 1
+    - _brightness: 0.3
     - _bumpAmount: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
