@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BumpedEnvironement_Material
-  m_Shader: {fileID: 4800000, guid: a3e5b9786dec5514daab54af4acc51a5, type: 3}
+  m_Shader: {fileID: 4800000, guid: 9d419c5cf25c67f4395541c669d9dca3, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -61,11 +61,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _cubeMap:
-        m_Texture: {fileID: 8900000, guid: de78f930088fc194290da7400c89bfb5, type: 3}
+        m_Texture: {fileID: 8900000, guid: ba63ee1042451c4479bc72f2829ee3ad, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _diffuseTexture:
         m_Texture: {fileID: 2800000, guid: f43118a7f02b195499fe0aca290e93ae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _myBump:
+        m_Texture: {fileID: 2800000, guid: 41d1f23d6aac4d94198b8e2f01e560b3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _myCube:
+        m_Texture: {fileID: 8900000, guid: 04bfe9229de6de8429dbd8c69b781954, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -86,8 +94,8 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _brightness: 0.3
-    - _bumpAmount: 1
+    - _brightness: 0.14
+    - _bumpAmount: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
