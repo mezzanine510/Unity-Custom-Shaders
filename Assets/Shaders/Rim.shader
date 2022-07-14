@@ -8,15 +8,14 @@ Shader "Holistic/Rim"
     SubShader
     {
         CGPROGRAM
-            // Physically based Standard lighting model, and enable shadows on all light types
             #pragma surface surf Standard fullforwardshadows
 
-            // Use shader model 3.0 target, to get nicer looking lighting
             #pragma target 3.0
 
             struct Input
             {
                 float3 viewDir;
+                float3 worldPos;
             };
 
             float4 _RimColor;
@@ -24,8 +23,11 @@ Shader "Holistic/Rim"
 
             void surf (Input IN, inout SurfaceOutputStandard o)
             {
-                half rim = 1 - saturate(dot(normalize(IN.viewDir), o.Normal)); // always normalize vectors to produce dot product ranging from [1, -1]
-                o.Emission = _RimColor.rgb * pow(rim, _RimPower);
+                // always normalize vectors to produce dot product ranging from [1, -1]
+                half rim = 1 - saturate(dot(normalize(IN.viewDir), o.Normal));
+                o.Emission = frac(IN.worldPos.y * 10 * 0.5) > 0.4 ?
+                             float3(0, 1, 0) * rim:
+                             float3(1, 0, 0) * rim;
             }
         ENDCG
     }
