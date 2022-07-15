@@ -3,9 +3,6 @@ Shader "Holistic/BasicLambert"
     Properties
     {
         _Color ("Color", Color) = (1,1,1,1)
-        _SpecColor("Specular Color", Color) = (1,1,1,1)
-        _Spec("Specular", Range(0,1)) = 0.5
-        _Gloss("Gloss", Range(0,1)) = 0.5
     }
     SubShader
     {
@@ -16,14 +13,21 @@ Shader "Holistic/BasicLambert"
 
         CGPROGRAM
             // Physically based Standard lighting model, and enable shadows on all light types
-            #pragma surface surf Lambert
-
+            #pragma surface surf BasicLambert
+            
             // Use shader model 3.0 target, to get nicer looking lighting
             #pragma target 3.0
 
+            half4 LightingBasicLambert (SurfaceOutput s, half3 lightDir, half atten)
+            {
+                half NdotL = dot(s.Normal, lightDir);
+                half4 c;
+                c.rgb = s.Albedo * _LightColor0.rgb * (NdotL * atten);
+                c.a = s.Alpha;
+                return c;
+            }
+
             float4 _Color;
-            half _Spec;
-            half _Gloss;
 
             struct Input
             {
@@ -33,8 +37,6 @@ Shader "Holistic/BasicLambert"
             void surf (Input IN, inout SurfaceOutput o)
             {
                 o.Albedo = _Color.rgb;
-                o.Specular = _Spec;
-                o.Gloss = _Gloss;
             }
         ENDCG
     }

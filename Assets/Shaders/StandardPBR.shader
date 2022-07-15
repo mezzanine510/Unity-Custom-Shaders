@@ -28,8 +28,11 @@ Shader "Holistic/StandardPBR"
             void surf (Input IN, inout SurfaceOutputStandard o)
             {
                 o.Albedo = _Color.rgb;
-                // Metallic and smoothness come from slider variables
                 o.Smoothness = tex2D(_MetallicTex, IN.uv_MetallicTex).r;
+
+                // reversed smooth and rough areas
+                // o.Smoothness = 1 - tex2D(_MetallicTex, IN.uv_MetallicTex).r;
+
                 o.Metallic = _Metallic;
                 o.Emission = tex2D(_MetallicTex, IN.uv_MetallicTex).r * _Emission;
             }
