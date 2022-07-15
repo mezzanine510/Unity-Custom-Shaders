@@ -25,7 +25,6 @@ Shader "Holistic/StandardSpecPBR"
             void surf (Input IN, inout SurfaceOutputStandardSpecular o)
             {
                 o.Albedo = _Color.rgb;
-                // Metallic and smoothness come from slider variables
                 o.Smoothness = tex2D(_MetallicTex, IN.uv_MetallicTex).r;
                 o.Specular = _SpecColor.rgb;
             }
