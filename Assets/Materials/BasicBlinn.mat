@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BasicBlinn
-  m_Shader: {fileID: 4800000, guid: d80c26abc0669f743991fe8883a949ed, type: 3}
+  m_Shader: {fileID: 4800000, guid: 88fd299cfa54a514d83cbae3fde7a5d9, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
