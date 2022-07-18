@@ -1,2 +1,2 @@
 # Unity-Custom-Shaders
-Custom shaders built in Unity using Cg/HLSL. Currently only useable with Built-in Render Pipeline.
+Custom shaders built in Unity using Cg/HLSL. Currently using Built-in Render Pipeline.
