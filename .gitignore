@@ -71,8 +71,8 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-# Third party assets
-/[Aa]ssets/ConsolePro
-
 # Plugins
 /[Aa]ssets/Plugins
+
+# Third party assets
+/[Aa]ssets/ConsolePro

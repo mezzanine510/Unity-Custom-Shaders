@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ToonRampAlbedo
-  m_Shader: {fileID: 4800000, guid: 42b535dc296e49c428713f471e874bb1, type: 3}
+  m_Name: ToonRamp_Material
+  m_Shader: {fileID: 4800000, guid: 04cc359aa72d83f4eb3794a99e40edd1, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -79,6 +79,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 1, b: 0.97663546, a: 1}
+    - _Color: {r: 0.55602527, g: 0.990566, b: 0.59586924, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
