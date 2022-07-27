@@ -8,8 +8,9 @@ Shader "Holistic/BlendTest"
     {
         Tags { "Queue" = "Transparent"}
 
-        Blend SrcAlpha OneMinusSrcAlpha
-        // Blend One One
+        // Blend DstColor Zero
+        // Blend SrcAlpha OneMinusSrcAlpha
+        Blend One One
         
         Pass
         {
